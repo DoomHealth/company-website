@@ -1,3 +1,24 @@
+const systems = [
+  "athena",
+  "eCW",
+  "AdvancedMD",
+  "Kareo",
+  "Kipu",
+  "Elation",
+  "Epic",
+  "MEDITECH Expanse",
+  "ModMed",
+  "Cerner",
+  "TherapyNotes",
+  "WebPT",
+  "Practice Fusion",
+  "DrChrono",
+  "Prognosis",
+  "Phoenix",
+  "Onco",
+  "iKnowMed",
+]
+
 const moves = [
   {
     n: "Read",
@@ -27,6 +48,20 @@ export function Ehrs() {
           across 70+ electronic health records, including legacy systems that
           never published a clean API.
         </p>
+      </div>
+      <p className="wrap ehr-include">Including</p>
+      <div className="ehr-banner" aria-label="EHRs in the integration set">
+        <div className="ehr-track">
+          {[0, 1].map((copy) => (
+            <ul key={copy} aria-hidden={copy === 1}>
+              {systems.map((name) => (
+                <li key={`${copy}-${name}`}>{name}</li>
+              ))}
+            </ul>
+          ))}
+        </div>
+      </div>
+      <div className="wrap">
         <ol className="moves">
           {moves.map((move) => (
             <li key={move.n}>

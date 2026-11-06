@@ -591,6 +591,25 @@ p {
   margin-top: 8px;
 }
 
+.ambient-points {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+}
+
+.ambient-points li {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.ambient-points strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
 .copilot {
   margin-top: 36px;
   display: grid;
@@ -642,13 +661,49 @@ p {
   text-transform: uppercase;
 }
 
-.paper h4 {
-  margin: 22px 0 8px;
+.note-block-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.note-block-head h4 {
+  margin: 0;
   font-family: var(--sans);
   font-size: 0.78rem;
   font-weight: 650;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.approve {
+  flex: none;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid rgba(28, 25, 21, 0.35);
+  background: transparent;
+  color: var(--paper-ink);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.approve.on {
+  background: var(--paper-ink);
+  color: var(--paper);
+  border-color: var(--paper-ink);
+}
+
+.sign-ready {
+  color: var(--paper-ink);
+}
+
+.sign-wait {
+  color: rgba(28, 25, 21, 0.4);
 }
 
 .paper p {
@@ -900,6 +955,58 @@ p {
   margin-top: 28px;
   color: var(--ink-soft);
   font-size: 1.15rem;
+}
+
+.ehr-include {
+  margin: 48px auto 14px;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.ehr-banner {
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.ehr-track {
+  display: flex;
+  width: max-content;
+  animation: ehr-slide 48s linear infinite;
+}
+
+.ehr-banner:hover .ehr-track,
+.ehr-banner:focus-within .ehr-track {
+  animation-play-state: paused;
+}
+
+.ehr-track ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ehr-track li {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 18px 0 18px 32px;
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.ehr-track li::after {
+  content: "";
+  width: 18px;
+  height: 1px;
+  background: var(--accent);
 }
 
 .moves {
@@ -1176,10 +1283,35 @@ p {
     animation: none;
     stroke-dashoffset: 0;
   }
+
+  .ehr-track {
+    animation: none;
+    width: auto;
+    flex-wrap: wrap;
+  }
+
+  .ehr-track ul[aria-hidden="true"] {
+    display: none;
+  }
+
+  .ehr-track ul {
+    flex-wrap: wrap;
+    padding: 8px 16px 16px;
+  }
 }
 
 @keyframes draw {
   to {
     stroke-dashoffset: 0;
+  }
+}
+
+@keyframes ehr-slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
   }
 }

@@ -4,7 +4,7 @@ export const CONTACT_EMAIL = "hello@doomhealth.com"
 
 export const nav = [
   { href: "#platform", label: "Platform" },
-  { href: "#note", label: "The note" },
+  { href: "#note", label: "Ambient" },
   { href: "#patients", label: "Patients" },
   { href: "#ehrs", label: "EHRs" },
 ]
@@ -36,10 +36,12 @@ export const chapters = [
     n: "02",
     kicker: "Documentation",
     title: "Ambient scribe and copilot",
-    body: "Before the encounter, doomhealth pulls the chart — medications, conditions, labs, prior notes — and the year the patient has been living. During the visit it listens. Afterward the note cites both. The clinician reviews and signs.",
+    body: "Before the encounter, doomhealth pulls the chart — medications, conditions, labs, prior notes — and the year the patient has been living. During the visit it listens. Afterward the draft follows the practice's template, with linked evidence on every line that uses the record. The clinician verifies and approves each section, then signs.",
     points: [
       "Chart context plus wearable and home-device trends",
-      "Mood, diet, activity, calories, and vaccines from the patient app",
+      "Linked evidence on every line that uses the record",
+      "Unlimited custom templates",
+      "Clinician verifies and approves each template section",
       "A copilot that answers in plain language, every line cited",
       "Writeback into the EHR",
     ],
