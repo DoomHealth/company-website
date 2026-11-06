@@ -1,5 +1,5 @@
 export const COMPANY = "doomhealth"
-export const SITE_URL = "https://doomhealth.com"
+export const SITE_URL = "https://www.doomhealth.com"
 export const CONTACT_EMAIL = "hello@doomhealth.com"
 
 export const nav = [
