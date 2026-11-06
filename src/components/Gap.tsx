@@ -4,14 +4,14 @@ export function Gap() {
   return (
     <section className="gap" aria-labelledby="gap-title">
       <div className="wrap gap-grid">
-        <div>
+        <div data-reveal>
           <p className="kicker">The record</p>
           <h2 id="gap-title">
             Fifteen minutes in the room.
             <em> A year of the patient outside it.</em>
           </h2>
         </div>
-        <div className="gap-copy">
+        <div className="gap-copy" data-reveal data-d="1">
           <p>
             Clinicians decide from what they can see. The chart holds
             medications, conditions, labs, and prior notes. Watches, glucose

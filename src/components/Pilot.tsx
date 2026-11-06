@@ -35,7 +35,7 @@ export function Pilot() {
   return (
     <section id="pilot" className="pilot" aria-labelledby="pilot-title">
       <div className="wrap pilot-grid">
-        <div>
+        <div data-reveal>
           <p className="kicker">Pilots</p>
           <h2 id="pilot-title">Bring the year into the next visit.</h2>
           <p className="dek">
@@ -49,7 +49,7 @@ export function Pilot() {
           </p>
         </div>
 
-        <form className="form" onSubmit={submit}>
+        <form className="form" data-reveal data-d="1" onSubmit={submit}>
           <div className="fields">
             <label>
               Name

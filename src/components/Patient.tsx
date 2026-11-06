@@ -16,7 +16,7 @@ export function Patient() {
   return (
     <section id="patients" className="patient" aria-labelledby="patient-title">
       <div className="wrap patient-grid">
-        <div className="phone-wrap">
+        <div className="phone-wrap" data-reveal>
           <div className="phone">
             <div className="phone-screen">
               <header className="phone-top">
@@ -93,7 +93,7 @@ export function Patient() {
           <p className="phone-caption">Example patient app. Your entries stay on your record.</p>
         </div>
 
-        <div>
+        <div data-reveal data-d="1">
           <p className="kicker">Patient app</p>
           <h2 id="patient-title">The year has somewhere to live.</h2>
           <p className="dek">

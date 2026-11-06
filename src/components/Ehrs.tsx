@@ -37,7 +37,7 @@ const moves = [
 export function Ehrs() {
   return (
     <section id="ehrs" className="ehrs" aria-labelledby="ehr-title">
-      <div className="wrap">
+      <div className="wrap" data-reveal>
         <p className="kicker">Integrations</p>
         <div className="ehr-stat">
           <span>70+</span>
@@ -63,8 +63,8 @@ export function Ehrs() {
       </div>
       <div className="wrap">
         <ol className="moves">
-          {moves.map((move) => (
-            <li key={move.n}>
+          {moves.map((move, index) => (
+            <li key={move.n} data-reveal data-d={index}>
               <strong>{move.n}</strong>
               <p>{move.text}</p>
             </li>

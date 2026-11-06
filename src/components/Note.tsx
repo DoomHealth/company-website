@@ -15,7 +15,7 @@ export function Note() {
   return (
     <section id="note" className="note-section" aria-labelledby="note-title">
       <div className="wrap note-grid">
-        <div className="note-intro">
+        <div className="note-intro" data-reveal>
           <p className="kicker">Ambient solution</p>
           <h2 id="note-title">The page they actually sign.</h2>
           <p>
@@ -60,7 +60,7 @@ export function Note() {
           </div>
         </div>
 
-        <article className="paper" aria-label="Example progress note">
+        <article className="paper" data-reveal data-d="1" aria-label="Example progress note">
           <header className="paper-top">
             <span>Example · custom template</span>
             <span>Primary care</span>

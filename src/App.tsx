@@ -7,8 +7,11 @@ import { Note } from "./components/Note"
 import { Patient } from "./components/Patient"
 import { Pilot } from "./components/Pilot"
 import { Platform } from "./components/Platform"
+import { useReveal } from "./useReveal"
 
 export default function App() {
+  useReveal()
+
   return (
     <>
       <a className="skip" href="#top">

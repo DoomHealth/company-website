@@ -4,7 +4,7 @@ export function Platform() {
   return (
     <section id="platform" className="platform" aria-labelledby="platform-title">
       <div className="wrap">
-        <header className="section-head">
+        <header className="section-head" data-reveal>
           <p className="kicker">The platform</p>
           <h2 id="platform-title">One company. Four rooms of the practice.</h2>
           <p>
@@ -15,8 +15,14 @@ export function Platform() {
         </header>
 
         <div className="chapters">
-          {chapters.map((chapter) => (
-            <article id={chapter.id} key={chapter.id} className="chapter">
+          {chapters.map((chapter, index) => (
+            <article
+              id={chapter.id}
+              key={chapter.id}
+              className="chapter"
+              data-reveal
+              data-d={index % 3}
+            >
               <p className="chapter-n">{chapter.n}</p>
               <div>
                 <p className="kicker">{chapter.kicker}</p>
@@ -36,7 +42,7 @@ export function Platform() {
 
         <ol className="flow" aria-label="How a patient moves through doomhealth">
           {flow.map((step, index) => (
-            <li key={step}>
+            <li key={step} data-reveal data-d={index}>
               <span>0{index + 1}</span>
               {step}
             </li>

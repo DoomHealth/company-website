@@ -7,21 +7,23 @@ export function Hero() {
     <section className="hero" aria-labelledby="hero-title">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <p className="kicker">Healthcare, around the visit</p>
-          <h1 id="hero-title">
+          <p className="kicker" data-reveal>
+            Healthcare, around the visit
+          </p>
+          <h1 id="hero-title" data-reveal data-d="1">
             See the year
             <em> before you prescribe.</em>
           </h1>
-          <p className="lead">
+          <p className="lead" data-reveal data-d="2">
             doomhealth is the system for the front office, the note, the revenue
             cycle, and the patient between visits.
           </p>
-          <p className="dek">
+          <p className="dek" data-reveal data-d="3">
             Before a clinician prescribes, they see what changed: the chart,
             wearables and home devices, mood, diet, activity, and vaccines.
             The note cites its sources and writes back across 70+ EHRs.
           </p>
-          <div className="hero-actions">
+          <div className="hero-actions" data-reveal data-d="4">
             <a className="btn" href="#pilot">
               Request a pilot
             </a>
@@ -29,10 +31,17 @@ export function Hero() {
               See the platform
             </a>
           </div>
-          <YearStrip />
+          <div data-reveal data-d="5">
+            <YearStrip />
+          </div>
         </div>
 
-        <aside className="preview" aria-label="Example brief a clinician sees before the visit">
+        <aside
+          className="preview"
+          data-reveal
+          data-d="2"
+          aria-label="Example brief a clinician sees before the visit"
+        >
           <header className="preview-top">
             <span>Before the visit</span>
             <span>Example</span>
