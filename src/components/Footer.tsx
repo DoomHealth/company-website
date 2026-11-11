@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="wrap footer-grid">
         <div>
-          <a className="logo" href="#top">
+          <a className="logo" href="/#top">
             {COMPANY}
           </a>
           <p>
@@ -23,6 +23,14 @@ export function Footer() {
           depends on payer rules, eligible devices, and the practice’s own
           billing.
         </p>
+        <nav className="footer-links" aria-label="Company">
+          <a href="/about">About</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/faq">FAQs</a>
+          <a href="/hipaa">HIPAA &amp; security</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/terms">Terms</a>
+        </nav>
         <p className="footer-mail">
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
           <span>© {year} {COMPANY}</span>

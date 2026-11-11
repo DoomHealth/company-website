@@ -28,11 +28,12 @@ export function Nav() {
   }, [])
 
   const close = () => setOpen(false)
+  const home = window.location.pathname === "/" ? "" : "/"
 
   return (
     <header className={scrolled || open ? "site-header scrolled" : "site-header"}>
       <div className="wrap nav-bar">
-        <a className="logo" href="#top" onClick={close}>
+        <a className="logo" href={`${home}#top`} onClick={close}>
           <Trace />
           doomhealth
         </a>
@@ -42,15 +43,15 @@ export function Nav() {
           aria-label="Primary"
         >
           {nav.map((item) => (
-            <a key={item.href} href={item.href} onClick={close}>
+            <a key={item.href} href={`${home}${item.href}`} onClick={close}>
               {item.label}
             </a>
           ))}
-          <a className="btn btn-small" href="#pilot" onClick={close}>
+          <a className="btn btn-small" href={`${home}#pilot`} onClick={close}>
             Request a pilot
           </a>
         </nav>
-        <a className="nav-pilot" href="#pilot" onClick={close}>
+        <a className="nav-pilot" href={`${home}#pilot`} onClick={close}>
           Pilot
         </a>
         <button
