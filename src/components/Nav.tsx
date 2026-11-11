@@ -47,6 +47,17 @@ export function Nav() {
               {item.label}
             </a>
           ))}
+          <a href="/pricing" onClick={close}>Pricing</a>
+          <a href="/faq" onClick={close}>FAQs</a>
+          <details className="nav-company">
+            <summary>Company</summary>
+            <div className="nav-company-links">
+              <a href="/about" onClick={close}>About</a>
+              <a href="/hipaa" onClick={close}>HIPAA &amp; security</a>
+              <a href="/privacy" onClick={close}>Privacy policy</a>
+              <a href="/terms" onClick={close}>Terms</a>
+            </div>
+          </details>
           <a className="btn btn-small" href={`${home}#pilot`} onClick={close}>
             Request a pilot
           </a>
